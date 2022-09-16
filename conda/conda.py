@@ -43,7 +43,8 @@ y_pred = regr.predict(X_test)
 plt.scatter(X_test, y_test, color ='b')
 plt.plot(X_test, y_pred, color ='k')
 
-plt.show()
+# plt.show()
+plt.savefig("graph1.png", bbox_inches="tight")
 # Data scatter of predicted values
 df_binary500 = df_binary[:][:500]
 	
@@ -66,8 +67,10 @@ print(regr.score(X_test, y_test))
 y_pred = regr.predict(X_test)
 plt.scatter(X_test, y_test, color ='b')
 plt.plot(X_test, y_pred, color ='k')
-  
-plt.show()
+
+plt.savefig("graph2.png", bbox_inches="tight")
+# plt.show()
+
   
 mae = mean_absolute_error(y_true=y_test,y_pred=y_pred)
 #squared True returns MSE value, False returns RMSE value.
